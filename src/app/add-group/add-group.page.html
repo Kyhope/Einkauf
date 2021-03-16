@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Gruppe hinzufügen</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item *ngFor="let person of personIdChecks">
+    <ion-label>{{ person.name }}</ion-label>
+    <ion-checkbox [(ngModel)]="person.isChecked" slot="start"></ion-checkbox>
+  </ion-item>
+  <ion-button (click)="confirmPersonIdCheck()" expand="block" fill="clear" shape="round">
+    Annehmen
+  </ion-button>
+</ion-content>
